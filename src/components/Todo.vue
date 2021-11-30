@@ -1,26 +1,25 @@
 <template>
-    <div>
-        <ul>
-            <TodoItem
-            v-for="todo in todos"
-             v-bind:key="todo.title"
-             :title="todo.title"
-             @todo-item-changed="Changed"
-             />
-        </ul>
-    </div>
+  <div>
+      <ul>
+          <TodoItem
+          v-for="todo in todos"
+          v-bind:key="todo.title"
+          :todo="todo"
+          @todo-item-changed="Changed"
+          />
+      </ul>
+  </div>
 </template>
-<script>
 
-import TodoItem from "./TodoItem.vue"
-export default{
+<script>
+import TodoItem from './TodoItem.vue'
+export default {
     props: ['todos'],
-    components:{TodoItem},
+    components: {TodoItem},
     methods: {
-        Changed(e){
+        Changed(e) {
             this.$emit('todo-item-changed', e)
         }
-    },
+    }
 }
-
 </script>

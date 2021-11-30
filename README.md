@@ -1,4 +1,4 @@
-# [Név]
+# Barta Balázs
 
 ## Hogyan kezdj neki?
 

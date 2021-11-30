@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Todo :todos="todos"/>
+    <Todo :todos="todos" @todo-item-changed="Changed"/>
   </div>
 </template>
 
@@ -25,7 +25,12 @@ export default {
         },
         ]
     }
-  }
+  },
+  methods: {
+    Changed(e){
+      
+    }
+  },
 }
 </script>
 
